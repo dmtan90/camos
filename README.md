@@ -1,6 +1,6 @@
-# OpenMiko
+# CamOS
 
-OpenMiko is custom opensource firmware for cameras that use the Ingenic T20 chip.
+CamOS is custom opensource firmware for cameras that use the Ingenic T20 chip.
 These cameras include the Wyzecam V2 and Xiaomi Xiaofang.
 
 The firmware aims to provide an an alternative to the closed source out of box firmwares which can often be riddled with bugs and security holes. Privacy is also a concern as it is difficult to tell if out of box firmware reaches out to other servers or is broadcasting metadata.
@@ -54,7 +54,7 @@ If you have a classic XiaoFang with a ARM-Processor, consider using https://gith
 
 ## Installation and Usage
 
-Before installing OpenMiko, we suggest you carefully read the [FAQ](/doc/faq.md).
+Before installing CamOS, we suggest you carefully read the [FAQ](/doc/faq.md).
 
 Download the specific version of the firmware you wish to install. The releases can be found on the right hand side in Github under the label "Releases".
 
@@ -82,7 +82,7 @@ On the sdcard create the directories `/config/overlay/etc`:
 
 In the `etc` directory copy the file [`wpa_supplicant.conf`](https://github.com/openmiko/openmiko/blob/master/overlay_minimal/etc/wpa_supplicant.conf). Edit this file and plug in your wifi name and password.
 
-Insert the sdcard into the camera and reboot. OpenMiko will copy this directory over to the `/config` partition (which is persistent flash storage). This method can also be used to overwrite other files. For example:
+Insert the sdcard into the camera and reboot. CamOS will copy this directory over to the `/config` partition (which is persistent flash storage). This method can also be used to overwrite other files. For example:
 
 
 - `/etc/passwd` and `/etc/shadow` can be overwritten to make sure password changes are persistent
@@ -156,7 +156,7 @@ If you can't seem to get up and running here are some things to check:
 
 ## Issues and support
 
-If you encounter an issue which you think is a bug in the OpenMiko or the associated libraries, you are welcome to submit it here on Github: https://github.com/openmiko/openmiko/issues.
+If you encounter an issue which you think is a bug in the CamOS or the associated libraries, you are welcome to submit it here on Github: https://github.com/openmiko/openmiko/issues.
 
 Please provide as much context as possible:
 
