@@ -1,5 +1,5 @@
---- atoms-kernel/arch/mips/xburst/soc-t31/chip-t31/isvp/common/spi_bus.c
-+++ atoms-kernel/arch/mips/xburst/soc-t31/chip-t31/isvp/common/spi_bus.c
+--- kernel-3.10.14/arch/mips/xburst/soc-t31/chip-t31/isvp/common/spi_bus.c
++++ kernel-3.10.14/arch/mips/xburst/soc-t31/chip-t31/isvp/common/spi_bus.c
 @@ -114,6 +114,27 @@ struct spi_nor_platform_data spi_nor_pdata[] = {
  #endif
  	},
