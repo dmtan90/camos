@@ -1,15 +1,15 @@
-diff -Nura kernel-3.10.14/drivers/media/platform/Makefile kernel-3.10.14_mod/drivers/media/platform/Makefile
---- kernel-3.10.14/drivers/media/platform/Makefile	2018-09-21 16:40:46.000000000 +0200
-+++ kernel-3.10.14_mod/drivers/media/platform/Makefile	2018-11-09 02:38:15.117932482 +0100
+diff -Nura atoms-kernel/drivers/media/platform/Makefile atoms-kernel_mod/drivers/media/platform/Makefile
+--- atoms-kernel/drivers/media/platform/Makefile	2018-09-21 16:40:46.000000000 +0200
++++ atoms-kernel_mod/drivers/media/platform/Makefile	2018-11-09 02:38:15.117932482 +0100
 @@ -51,3 +51,5 @@
  obj-$(CONFIG_ARCH_OMAP)	+= omap/
  
  ccflags-y += -I$(srctree)/drivers/media/i2c
 +
 +obj-$(CONFIG_VIDEO_TX_ISP)		+= tx-isp/
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_calibrations.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_calibrations.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_calibrations.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_calibrations.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_calibrations.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_calibrations.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_calibrations.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_calibrations.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,528 @@
 +/*-----------------------------------------------------------------------------
 +     This confidential and proprietary software/information may be used only
@@ -539,9 +539,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_calibr
 +    return result ;
 +}
 +
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_calibrations_init.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_calibrations_init.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_calibrations_init.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_calibrations_init.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_calibrations_init.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_calibrations_init.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_calibrations_init.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_calibrations_init.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,42 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -585,9 +585,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_calibr
 +	}
 +	return result ;
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_calibrations_init.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_calibrations_init.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_calibrations_init.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_calibrations_init.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_calibrations_init.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_calibrations_init.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_calibrations_init.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_calibrations_init.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,39 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -628,9 +628,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_calibr
 +
 +
 +#endif /* __APICAL_CALIBRATIONS_INIT_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_cmd_interface.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_cmd_interface.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_cmd_interface.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_cmd_interface.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_cmd_interface.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_cmd_interface.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_cmd_interface.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_cmd_interface.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,18 @@
 +/*-----------------------------------------------------------------------------
 +	 This confidential and proprietary software/information may be used only
@@ -650,9 +650,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_cmd_in
 +void apical_cmd_process( void ) ;
 +
 +#endif /* __APICAL_CMD_INTERFACE_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_command_api.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_command_api.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_command_api.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_command_api.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_command_api.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_command_api.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_command_api.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_command_api.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,471 @@
 +// ------------------------------------------------------------------------------ //
 +//     This confidential and proprietary software/information may be used only    //
@@ -1125,9 +1125,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_comman
 +uint8_t apical_api_calibration(uint8_t type, uint8_t direction, void* data, uint32_t data_size, uint32_t* ret_value);
 +
 +#endif//_APICAL_COMMAND_API_H_
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_custom_initialization.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_custom_initialization.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_custom_initialization.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_custom_initialization.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_custom_initialization.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_custom_initialization.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_custom_initialization.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_custom_initialization.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,210 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -1339,9 +1339,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_custom
 +uint8_t* apical_custom_sequence(void) {
 +	return p_isp_data ;
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_custom_initialization.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_custom_initialization.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_custom_initialization.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_custom_initialization.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_custom_initialization.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_custom_initialization.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_custom_initialization.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_custom_initialization.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,38 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -1381,9 +1381,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_custom
 +uint8_t* apical_custom_sequence(void) ;
 +
 +#endif // __APICAL_CUSTOM_INITIALIZATION_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/ApicalDefault.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/ApicalDefault.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/ApicalDefault.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/ApicalDefault.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/ApicalDefault.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/ApicalDefault.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/ApicalDefault.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/ApicalDefault.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,31 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -1416,9 +1416,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/ApicalDefault
 +void load_sensor_interface(sensor_ApicalDefault_iface_ptr_t p_iface, uint8_t mode)
 +{
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/ApicalDefault.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/ApicalDefault.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/ApicalDefault.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/ApicalDefault.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/ApicalDefault.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/ApicalDefault.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/ApicalDefault.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/ApicalDefault.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,29 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -1449,9 +1449,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/ApicalDefault
 +void mipi_auto_tune(sensor_ApicalDefault_iface_ptr_t p_iface, uint8_t mode, uint32_t refw, uint32_t refh);
 +
 +#endif /* __APICALDEFAULT_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_dynamic_calibrations.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_dynamic_calibrations.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_dynamic_calibrations.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_dynamic_calibrations.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_dynamic_calibrations.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_dynamic_calibrations.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_dynamic_calibrations.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_dynamic_calibrations.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,405 @@
 +// ------------------------------------------------------------------------------ //
 +//     This confidential and proprietary software/information may be used only    //
@@ -1858,9 +1858,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_dynami
 +	}
 +	return result ;
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_isp_io.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_isp_io.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_isp_io.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_isp_io.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_isp_io.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_isp_io.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_isp_io.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_isp_io.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,59 @@
 +#include "apical_isp_io.h"
 +#include "tx-isp-core.h"
@@ -1921,9 +1921,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_isp_io
 +{
 +	apical_io_base = base;
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_modulation.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_modulation.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_modulation.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_modulation.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_modulation.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_modulation.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_modulation.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_modulation.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,31 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -1956,9 +1956,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_modula
 +uint32_t calc_inv_equidistant_modulation_u32(uint32_t x, const uint32_t *p_table, uint32_t table_len);
 +
 +#endif /* __APICAL_MODULATION_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_sbus.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_sbus.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_sbus.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_sbus.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_sbus.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_sbus.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_sbus.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_sbus.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,51 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -2011,9 +2011,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_sbus.h
 +#include "apical_sbus_spi.h"
 +
 +#endif /* __APICAL_SBUS_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_sbus_i2c.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_sbus_i2c.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_sbus_i2c.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_sbus_i2c.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_sbus_i2c.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_sbus_i2c.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_sbus_i2c.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_sbus_i2c.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,22 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -2037,9 +2037,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_sbus_i
 +void i2c_init_access(void);
 +
 +#endif	/* __APICAL_SBUS_I2C_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_sbus_spi.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_sbus_spi.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_sbus_spi.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_sbus_spi.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_sbus_spi.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_sbus_spi.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_sbus_spi.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_sbus_spi.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,20 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -2061,9 +2061,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_sbus_s
 +void apical_sbus_spi_init(apical_sbus_ptr_t p_sbus);
 +
 +#endif	/* __APICAL_SBUS_SPI_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_scaler_lut.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_scaler_lut.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_scaler_lut.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_scaler_lut.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_scaler_lut.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_scaler_lut.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_scaler_lut.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_scaler_lut.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,1060 @@
 +#include "tx-isp-core.h"
 +struct isp_reg_t apical_downscaler_lut[] =
@@ -3125,9 +3125,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_scaler
 +	{0x1A3F8,	0x130C03FD},
 +	{0x1A3FC,	0x00020C13},
 +};
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_static_calibrations.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_static_calibrations.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_static_calibrations.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/apical_static_calibrations.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_static_calibrations.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_static_calibrations.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/apical_static_calibrations.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/apical_static_calibrations.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,663 @@
 +/**
 + *  This confidential and proprietary software/information may be used only
@@ -3792,9 +3792,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/apical_static
 +    }
 +    return result;
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/calibration.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/calibration.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/calibration.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/calibration.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/calibration.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/calibration.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/calibration.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/calibration.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,18 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -3814,9 +3814,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/calibration.h
 +#define PACK_DATE(y, m, d) (((((y)-2000) << 9)+(((m) & 0xF) << 5)+((d) & 0x1F)) & 0xFFFF)
 +
 +#endif // __CALIBRATION_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/isp_config_seq.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/isp_config_seq.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/isp_config_seq.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/isp_config_seq.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/isp_config_seq.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/isp_config_seq.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/isp_config_seq.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/isp_config_seq.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,455 @@
 +#if !defined(__ISP_SENSOR_H__)
 +#define __ISP_SENSOR_H__
@@ -4273,15 +4273,15 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/isp_config_se
 +#define SENSOR_ISP_SEQUENCE_DEFAULT_SETTINGS    2
 +
 +#endif /* __ISP_SENSOR_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/log.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/log.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/log.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/log.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/log.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/log.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/log.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/log.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,2 @@
 +#include "log.h"
 +const char * const log_level[LOG_MAX] = {"","EMERG","ALERT","CRIT","ERR","WARNING","NOTICE","INFO","DEBUG"};
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/log.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/log.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/log.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/log.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/log.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/log.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/log.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/log.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,27 @@
 +#ifndef LOG_H_INCLUDED
 +#define LOG_H_INCLUDED
@@ -4310,9 +4310,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/log.h kernel-
 +#define LOG(level,fmt,...) if((level)<=FW_LOG_LEVEL) printk("%s: %s(%d) %s: " fmt "\n",FILE,__func__,__LINE__,log_level[level],##__VA_ARGS__)
 +
 +#endif // LOG_H_INCLUDED
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/Makefile kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/Makefile
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/Makefile	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/Makefile	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/Makefile atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/Makefile
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/Makefile	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/Makefile	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,7 @@
 +# Makefile for APICAL ISP video driver
 +
@@ -4321,9 +4321,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/Makefile kern
 +	system_isp_io.o log.o system_io.o apical_calibrations.o apical_calibrations_init.o tx-isp-load-parameters.o \
 +	apical_custom_initialization.o ApicalDefault.o \
 +	system_i2c.o system_spi.o system_timer.o system_uart.o system_semaphore.o sensor_drv.o system_chardev.o
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/sensor_drv.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/sensor_drv.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/sensor_drv.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/sensor_drv.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/sensor_drv.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/sensor_drv.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/sensor_drv.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/sensor_drv.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,343 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -4668,9 +4668,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/sensor_drv.c 
 +	return ISP_SUCCESS;
 +}
 +//*************************************************************************************
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/sensor_drv.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/sensor_drv.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/sensor_drv.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/sensor_drv.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/sensor_drv.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/sensor_drv.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/sensor_drv.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/sensor_drv.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,114 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -4786,9 +4786,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/sensor_drv.h 
 +int apical_sensor_early_init(struct tx_isp_core_device *core);
 +
 +#endif /* __SENSOR_DRV_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/sensor_init.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/sensor_init.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/sensor_init.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/sensor_init.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/sensor_init.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/sensor_init.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/sensor_init.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/sensor_init.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,33 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -4823,9 +4823,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/sensor_init.h
 +void sensor_load_array_sequence(apical_sbus_ptr_t p_sbus, const sensor_reg_t **sequence, int group);
 +
 +#endif /* __SENSOR_INIT_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/spi_defs.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/spi_defs.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/spi_defs.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/spi_defs.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/spi_defs.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/spi_defs.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/spi_defs.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/spi_defs.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,31 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -4858,9 +4858,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/spi_defs.h ke
 +#define CHAR_LEN_MSK 0x007F
 +
 +#endif /* __SPI_DEFS_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_chardev.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_chardev.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_chardev.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_chardev.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_chardev.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_chardev.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_chardev.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_chardev.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,210 @@
 +/*-----------------------------------------------------------------------------
 +	 This confidential and proprietary software/information may be used only
@@ -5072,9 +5072,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_charde
 +	int rc = misc_deregister(&isp_miscdevice);
 +	return rc;
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_chardev.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_chardev.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_chardev.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_chardev.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_chardev.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_chardev.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_chardev.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_chardev.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,21 @@
 +/*-----------------------------------------------------------------------------
 +	 This confidential and proprietary software/information may be used only
@@ -5097,9 +5097,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_charde
 +int system_chardev_destroy(void);
 +
 +#endif /* SYSTEM_CHARDEV_H */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_i2c.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_i2c.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_i2c.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_i2c.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_i2c.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_i2c.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_i2c.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_i2c.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,24 @@
 +#include <asm/io.h>
 +#include "system_i2c.h"
@@ -5125,9 +5125,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_i2c.c 
 +	printk("%s: {add = 0x%02x, data = %p} size = %d\n",__func__, address, data, size);
 +	return 0;
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_i2c.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_i2c.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_i2c.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_i2c.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_i2c.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_i2c.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_i2c.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_i2c.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,15 @@
 +#ifndef __SYSTEM_I2C_H__
 +#define __SYSTEM_I2C_H__
@@ -5144,9 +5144,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_i2c.h 
 +#define I2C_NOCONNECT 	2
 +
 +#endif /* __SYSTEM_I2C_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_io.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_io.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_io.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_io.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_io.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_io.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_io.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_io.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,45 @@
 +#include <asm/io.h>
 +#include <apical-isp/system_io.h>
@@ -5193,9 +5193,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_io.c k
 +	tx_isp_writeb(apical_io_base, addr, data);
 +}
 +
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_isp_io.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_isp_io.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_isp_io.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_isp_io.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_isp_io.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_isp_io.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_isp_io.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_isp_io.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,8 @@
 +#include <tx-isp-common.h>
 +#include <apical-isp/apical_types.h>
@@ -5205,9 +5205,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_isp_io
 +	printk("^^^ %s  ^^^\n",__func__);
 +	dump_stack();
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_semaphore.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_semaphore.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_semaphore.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_semaphore.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_semaphore.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_semaphore.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_semaphore.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_semaphore.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,26 @@
 +#include "system_semaphore.h"
 +#include "linux/semaphore.h"
@@ -5235,9 +5235,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_semaph
 +	kfree(sem->psem);
 +	sem->psem = NULL;
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_semaphore.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_semaphore.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_semaphore.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_semaphore.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_semaphore.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_semaphore.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_semaphore.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_semaphore.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,18 @@
 +#ifndef __SEMAPHORE_H_INCLUDED
 +#define __SEMAPHORE_H_INCLUDED
@@ -5257,9 +5257,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_semaph
 +void destroy_semaphore(sem_t *sem);
 +//-----------------------------------------------------------------------------
 +#endif //__SEMAPHORE_H_INCLUDED
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_spi.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_spi.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_spi.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_spi.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_spi.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_spi.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_spi.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_spi.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,27 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -5288,9 +5288,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_spi.c 
 +void spi_init_access(void)
 +{
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_spi.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_spi.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_spi.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_spi.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_spi.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_spi.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_spi.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_spi.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,10 @@
 +#if !defined(__SYSTEM_SPI_H__)
 +#define __SYSTEM_SPI_H__
@@ -5302,9 +5302,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_spi.h 
 +void spi_init_access(void);
 +
 +#endif /* __SYSTEM_SPI_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_timer.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_timer.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_timer.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_timer.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_timer.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_timer.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_timer.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_timer.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,38 @@
 +#include <linux/kernel.h>
 +#include <linux/sched.h>
@@ -5344,9 +5344,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_timer.
 +}
 +//================================================================================
 +
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_timer.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_timer.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_timer.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_timer.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_timer.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_timer.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_timer.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_timer.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,10 @@
 +#if !defined(__SYSTEM_TIMER_H__)
 +#define __SYSTEM_TIMER_H__
@@ -5358,9 +5358,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_timer.
 +uint32_t system_timer_frequency(void);
 +
 +#endif /* __SYSTEM_TIMER_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_uart.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_uart.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_uart.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_uart.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_uart.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_uart.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_uart.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_uart.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,20 @@
 +#include "system_uart.h"
 +//#include <fcntl.h>
@@ -5382,9 +5382,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_uart.c
 +	//return read(fd, p, len);
 +	return 0;
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_uart.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_uart.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_uart.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/system_uart.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_uart.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_uart.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/system_uart.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/system_uart.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,10 @@
 +#ifndef __SYSTEM_UART_H__
 +#define __SYSTEM_UART_H__
@@ -5396,9 +5396,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/system_uart.h
 +int system_uart_read(int fd, uint8_t* p, int len);
 +
 +#endif
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/tx-isp-core.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-core.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/tx-isp-core.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-core.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/tx-isp-core.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-core.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/tx-isp-core.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-core.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,2802 @@
 +#include <linux/module.h>
 +#include <linux/delay.h>
@@ -8202,9 +8202,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/tx-isp-core.c
 +		proc_remove(core->proc);
 +	kfree(core);
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/tx-isp-core.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-core.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/tx-isp-core.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-core.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/tx-isp-core.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-core.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/tx-isp-core.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-core.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,151 @@
 +#ifndef __TX_ISP_CORE_H__
 +#define __TX_ISP_CORE_H__
@@ -8357,9 +8357,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/tx-isp-core.h
 +int register_tx_isp_core_device(struct platform_device *pdev, struct v4l2_device *v4l2_dev);
 +void release_tx_isp_core_device(struct v4l2_subdev *sd);
 +#endif /* __TX_ISP_CORE_H__  */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/tx-isp-core-tuning.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-core-tuning.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/tx-isp-core-tuning.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-core-tuning.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/tx-isp-core-tuning.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-core-tuning.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/tx-isp-core-tuning.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-core-tuning.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,4570 @@
 +#include <linux/videodev2.h>
 +#include <linux/delay.h>
@@ -12931,9 +12931,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/tx-isp-core-t
 +	v4l2_ctrl_handler_free(vfd->ctrl_handler);
 +	video_unregister_device(vfd);
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/tx-isp-core-tuning.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-core-tuning.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/tx-isp-core-tuning.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-core-tuning.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/tx-isp-core-tuning.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-core-tuning.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/tx-isp-core-tuning.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-core-tuning.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,831 @@
 +#ifndef __TX_ISP_CORE_TUNING_H__
 +#define __TX_ISP_CORE_TUNING_H__
@@ -13766,9 +13766,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/tx-isp-core-t
 +
 +
 +#endif //__TX_ISP_CORE_TUNING_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/tx-isp-load-parameters.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-load-parameters.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/tx-isp-load-parameters.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-load-parameters.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/tx-isp-load-parameters.c atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-load-parameters.c
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/tx-isp-load-parameters.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-load-parameters.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,264 @@
 +#include "tx-isp-load-parameters.h"
 +
@@ -14034,9 +14034,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/tx-isp-load-p
 +failed_open_file:
 +	return NULL;
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/tx-isp-load-parameters.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-load-parameters.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/tx-isp-load-parameters.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-load-parameters.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/apical-isp/tx-isp-load-parameters.h atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-load-parameters.h
+--- atoms-kernel/drivers/media/platform/tx-isp/apical-isp/tx-isp-load-parameters.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/apical-isp/tx-isp-load-parameters.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,141 @@
 +#ifndef __TX_ISP_LOAD_PARAMETERS_H__
 +#define __TX_ISP_LOAD_PARAMETERS_H__
@@ -14179,9 +14179,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/apical-isp/tx-isp-load-p
 +TXispPrivParamManage* load_tx_isp_parameters(struct tx_isp_sensor_attribute *attr);
 +void free_tx_isp_priv_param_manage(void);
 +#endif //__TX_ISP_LOAD_PARAMETERS_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_calibrations.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_calibrations.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_calibrations.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_calibrations.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_calibrations.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_calibrations.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_calibrations.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_calibrations.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,115 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -14298,9 +14298,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +
 +
 +#endif // __APICAL_CALIBRATIONS_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_calibrations_id.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_calibrations_id.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_calibrations_id.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_calibrations_id.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_calibrations_id.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_calibrations_id.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_calibrations_id.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_calibrations_id.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,375 @@
 +#ifndef __APICAL_ISP_CALIBRATIONS_H__
 +#define __APICAL_ISP_CALIBRATIONS_H__
@@ -14677,9 +14677,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +
 +#endif // __APICAL_ISP_CALIBRATIONS_H__
 +
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_configuration.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_configuration.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_configuration.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_configuration.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_configuration.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_configuration.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_configuration.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_configuration.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,28 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -14709,9 +14709,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +
 +
 +#endif /* __APICAL_CONFIGURATION_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_defect_pixel_mem_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_defect_pixel_mem_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_defect_pixel_mem_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_defect_pixel_mem_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_defect_pixel_mem_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_defect_pixel_mem_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_defect_pixel_mem_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_defect_pixel_mem_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,37 @@
 +#ifndef __APICAL_DEFECT_PIXEL_MEM_CONFIG_H__
 +#define __APICAL_DEFECT_PIXEL_MEM_CONFIG_H__
@@ -14750,9 +14750,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_DEFECT_PIXEL_MEM_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_ds1_gamma_rgb_mem_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ds1_gamma_rgb_mem_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_ds1_gamma_rgb_mem_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ds1_gamma_rgb_mem_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_ds1_gamma_rgb_mem_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ds1_gamma_rgb_mem_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_ds1_gamma_rgb_mem_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ds1_gamma_rgb_mem_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,37 @@
 +#ifndef __APICAL_DS1_GAMMA_RGB_MEM_CONFIG_H__
 +#define __APICAL_DS1_GAMMA_RGB_MEM_CONFIG_H__
@@ -14791,9 +14791,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_DS1_GAMMA_RGB_MEM_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_ds1_sharpen_mem_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ds1_sharpen_mem_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_ds1_sharpen_mem_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ds1_sharpen_mem_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_ds1_sharpen_mem_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ds1_sharpen_mem_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_ds1_sharpen_mem_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ds1_sharpen_mem_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,37 @@
 +#ifndef __APICAL_DS1_SHARPEN_MEM_CONFIG_H__
 +#define __APICAL_DS1_SHARPEN_MEM_CONFIG_H__
@@ -14832,9 +14832,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_DS1_SHARPEN_MEM_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_ds2_gamma_rgb_mem_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ds2_gamma_rgb_mem_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_ds2_gamma_rgb_mem_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ds2_gamma_rgb_mem_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_ds2_gamma_rgb_mem_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ds2_gamma_rgb_mem_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_ds2_gamma_rgb_mem_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ds2_gamma_rgb_mem_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,37 @@
 +#ifndef __APICAL_DS2_GAMMA_RGB_MEM_CONFIG_H__
 +#define __APICAL_DS2_GAMMA_RGB_MEM_CONFIG_H__
@@ -14873,9 +14873,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_DS2_GAMMA_RGB_MEM_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_ds2_sharpen_mem_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ds2_sharpen_mem_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_ds2_sharpen_mem_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ds2_sharpen_mem_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_ds2_sharpen_mem_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ds2_sharpen_mem_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_ds2_sharpen_mem_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ds2_sharpen_mem_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,37 @@
 +#ifndef __APICAL_DS2_SHARPEN_MEM_CONFIG_H__
 +#define __APICAL_DS2_SHARPEN_MEM_CONFIG_H__
@@ -14914,9 +14914,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_DS2_SHARPEN_MEM_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_ext_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ext_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_ext_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ext_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_ext_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ext_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_ext_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_ext_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,2781 @@
 +#ifndef __APICAL_EXT_CONFIG_H__
 +#define __APICAL_EXT_CONFIG_H__
@@ -17699,9 +17699,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_EXT_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_firmware_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_firmware_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_firmware_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_firmware_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_firmware_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_firmware_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_firmware_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_firmware_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,319 @@
 +/*-----------------------------------------------------------------------------
 +     This confidential and proprietary software/information may be used only
@@ -18022,9 +18022,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +#define SYSTEM_MAXIMUM_TEMPER_STRENGTH_DEFAULT 95
 +#define IRIDIX_MIN_MAX_STR 15
 +#endif
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_flash_timer_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_flash_timer_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_flash_timer_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_flash_timer_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_flash_timer_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_flash_timer_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_flash_timer_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_flash_timer_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,2282 @@
 +#ifndef __APICAL_FLASH_TIMER_CONFIG_H__
 +#define __APICAL_FLASH_TIMER_CONFIG_H__
@@ -20308,9 +20308,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_FLASH_TIMER_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_fpga_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_fpga_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_fpga_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_fpga_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_fpga_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_fpga_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_fpga_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_fpga_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,663 @@
 +#ifndef __APICAL_FPGA_CONFIG_H__
 +#define __APICAL_FPGA_CONFIG_H__
@@ -20975,9 +20975,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_FPGA_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_fr_gamma_rgb_mem_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_fr_gamma_rgb_mem_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_fr_gamma_rgb_mem_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_fr_gamma_rgb_mem_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_fr_gamma_rgb_mem_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_fr_gamma_rgb_mem_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_fr_gamma_rgb_mem_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_fr_gamma_rgb_mem_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,37 @@
 +#ifndef __APICAL_FR_GAMMA_RGB_MEM_CONFIG_H__
 +#define __APICAL_FR_GAMMA_RGB_MEM_CONFIG_H__
@@ -21016,9 +21016,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_FR_GAMMA_RGB_MEM_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_fr_sharpen_mem_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_fr_sharpen_mem_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_fr_sharpen_mem_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_fr_sharpen_mem_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_fr_sharpen_mem_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_fr_sharpen_mem_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_fr_sharpen_mem_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_fr_sharpen_mem_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,37 @@
 +#ifndef __APICAL_FR_SHARPEN_MEM_CONFIG_H__
 +#define __APICAL_FR_SHARPEN_MEM_CONFIG_H__
@@ -21057,9 +21057,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_FR_SHARPEN_MEM_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_gamma_fe0_mem_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_gamma_fe0_mem_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_gamma_fe0_mem_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_gamma_fe0_mem_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_gamma_fe0_mem_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_gamma_fe0_mem_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_gamma_fe0_mem_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_gamma_fe0_mem_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,37 @@
 +#ifndef __APICAL_GAMMA_FE0_MEM_CONFIG_H__
 +#define __APICAL_GAMMA_FE0_MEM_CONFIG_H__
@@ -21098,9 +21098,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_GAMMA_FE0_MEM_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_gamma_fe1_mem_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_gamma_fe1_mem_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_gamma_fe1_mem_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_gamma_fe1_mem_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_gamma_fe1_mem_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_gamma_fe1_mem_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_gamma_fe1_mem_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_gamma_fe1_mem_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,37 @@
 +#ifndef __APICAL_GAMMA_FE1_MEM_CONFIG_H__
 +#define __APICAL_GAMMA_FE1_MEM_CONFIG_H__
@@ -21139,9 +21139,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_GAMMA_FE1_MEM_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,265 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -21408,9 +21408,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +
 +
 +#endif /* __APICAL_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_histogram_mem_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_histogram_mem_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_histogram_mem_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_histogram_mem_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_histogram_mem_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_histogram_mem_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_histogram_mem_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_histogram_mem_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,37 @@
 +#ifndef __APICAL_HISTOGRAM_MEM_CONFIG_H__
 +#define __APICAL_HISTOGRAM_MEM_CONFIG_H__
@@ -21449,9 +21449,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_HISTOGRAM_MEM_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_i_hfilt1_mem_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_i_hfilt1_mem_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_i_hfilt1_mem_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_i_hfilt1_mem_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_i_hfilt1_mem_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_i_hfilt1_mem_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_i_hfilt1_mem_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_i_hfilt1_mem_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,37 @@
 +#ifndef __APICAL_I_HFILT1_MEM_CONFIG_H__
 +#define __APICAL_I_HFILT1_MEM_CONFIG_H__
@@ -21490,9 +21490,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_I_HFILT1_MEM_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_i_hfilt2_mem_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_i_hfilt2_mem_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_i_hfilt2_mem_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_i_hfilt2_mem_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_i_hfilt2_mem_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_i_hfilt2_mem_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_i_hfilt2_mem_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_i_hfilt2_mem_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,37 @@
 +#ifndef __APICAL_I_HFILT2_MEM_CONFIG_H__
 +#define __APICAL_I_HFILT2_MEM_CONFIG_H__
@@ -21531,9 +21531,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_I_HFILT2_MEM_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_interface_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_interface_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_interface_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_interface_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_interface_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_interface_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_interface_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_interface_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,19 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -21554,9 +21554,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +#define APICAL_MIPI_BOARD 0
 +#define APICAL_MIPI_I2C_ADDR 0
 +#endif
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,16908 @@
 +#ifndef __APICAL_ISP_CONFIG_H__
 +#define __APICAL_ISP_CONFIG_H__
@@ -38466,9 +38466,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_ISP_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_core_nomem_settings.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_core_nomem_settings.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_core_nomem_settings.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_core_nomem_settings.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_core_nomem_settings.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_core_nomem_settings.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_core_nomem_settings.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_core_nomem_settings.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,81 @@
 +
 +/*-----------------------------------------------------------------------------
@@ -38551,9 +38551,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +#define ISP_INTERRUPT_EVENT_FLASH_TIMER_OUTPUT_STROBE6    6
 +#define ISP_INTERRUPT_EVENT_FLASH_TIMER_OUTPUT_STROBE7    7
 +#endif /* __APICAL_ISP_CORE_NOMEM_SETTINGS_H__*/
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_io.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_io.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_io.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_io.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_io.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_io.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_io.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_isp_io.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,40 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -38595,9 +38595,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +
 +#include "apical_configuration.h"
 +#endif /* __APICAL_ISP_IO_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_i_vfilt1_mem_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_i_vfilt1_mem_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_i_vfilt1_mem_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_i_vfilt1_mem_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_i_vfilt1_mem_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_i_vfilt1_mem_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_i_vfilt1_mem_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_i_vfilt1_mem_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,37 @@
 +#ifndef __APICAL_I_VFILT1_MEM_CONFIG_H__
 +#define __APICAL_I_VFILT1_MEM_CONFIG_H__
@@ -38636,9 +38636,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_I_VFILT1_MEM_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_i_vfilt2_mem_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_i_vfilt2_mem_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_i_vfilt2_mem_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_i_vfilt2_mem_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_i_vfilt2_mem_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_i_vfilt2_mem_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_i_vfilt2_mem_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_i_vfilt2_mem_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,37 @@
 +#ifndef __APICAL_I_VFILT2_MEM_CONFIG_H__
 +#define __APICAL_I_VFILT2_MEM_CONFIG_H__
@@ -38677,9 +38677,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_I_VFILT2_MEM_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_jtag_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_jtag_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_jtag_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_jtag_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_jtag_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_jtag_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_jtag_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_jtag_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,37 @@
 +#ifndef __APICAL_JTAG_CONFIG_H__
 +#define __APICAL_JTAG_CONFIG_H__
@@ -38718,9 +38718,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_JTAG_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_math.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_math.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_math.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_math.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_math.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_math.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_math.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_math.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,50 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -38772,9 +38772,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +
 +#define APICAL_MODULO(N,D)  ((N)-(((N)/(D))*(D)))
 +#endif /* __APICAL_MATH_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_metering_mem_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_metering_mem_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_metering_mem_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_metering_mem_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_metering_mem_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_metering_mem_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_metering_mem_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_metering_mem_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,37 @@
 +#ifndef __APICAL_METERING_MEM_CONFIG_H__
 +#define __APICAL_METERING_MEM_CONFIG_H__
@@ -38813,9 +38813,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_METERING_MEM_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_radial_shading_mem_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_radial_shading_mem_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_radial_shading_mem_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_radial_shading_mem_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_radial_shading_mem_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_radial_shading_mem_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_radial_shading_mem_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_radial_shading_mem_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,37 @@
 +#ifndef __APICAL_RADIAL_SHADING_MEM_CONFIG_H__
 +#define __APICAL_RADIAL_SHADING_MEM_CONFIG_H__
@@ -38854,9 +38854,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_RADIAL_SHADING_MEM_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_sensor_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_sensor_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_sensor_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_sensor_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_sensor_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_sensor_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_sensor_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_sensor_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,72 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -38930,9 +38930,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +#define SENSOR_SEQUENCE_PREVIEW_RES_HALF_FPS 3
 +#define SENSOR_BUS_ADDRESS 0
 +#endif
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_shading_mem_config.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_shading_mem_config.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_shading_mem_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_shading_mem_config.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_shading_mem_config.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_shading_mem_config.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_shading_mem_config.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_shading_mem_config.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,37 @@
 +#ifndef __APICAL_SHADING_MEM_CONFIG_H__
 +#define __APICAL_SHADING_MEM_CONFIG_H__
@@ -38971,9 +38971,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +}
 +// ------------------------------------------------------------------------------ //
 +#endif //__APICAL_SHADING_MEM_CONFIG_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_types.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_types.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apical_types.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_types.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_types.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_types.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/apical_types.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/apical_types.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,102 @@
 +/*-----------------------------------------------------------------------------
 +  This confidential and proprietary software/information may be used only
@@ -39077,9 +39077,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/apica
 +
 +
 +#endif /* __APICAL__TYPES_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/system_interrupts.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/system_interrupts.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/system_interrupts.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/system_interrupts.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/system_interrupts.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/system_interrupts.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/system_interrupts.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/system_interrupts.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,17 @@
 +#if !defined(__SYSTEM_INTERRUPTS_H__)
 +#define __SYSTEM_INTERRUPTS_H__
@@ -39098,9 +39098,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/syste
 +void system_hw_interrupts_disable(void);
 +
 +#endif /* __SYSTEM_INTERRUPTS_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/system_io.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/system_io.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/system_io.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/system_io.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/system_io.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/system_io.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/system_io.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/system_io.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,16 @@
 +#if !defined(__SYSTEM_IO_H__)
 +#define __SYSTEM_IO_H__
@@ -39118,9 +39118,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/syste
 +//------------------------------------------------------
 +
 +#endif /* __SYSTEM_IO_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/system_isp_io.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/system_isp_io.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/system_isp_io.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/apical-isp/system_isp_io.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/system_isp_io.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/system_isp_io.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/apical-isp/system_isp_io.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/apical-isp/system_isp_io.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,8 @@
 +#if !defined(__SYSTEM_ISP_IO_H__)
 +#define __SYSTEM_ISP_IO_H__
@@ -39130,9 +39130,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/apical-isp/syste
 +void system_reset_sensor(uint32_t mask);
 +
 +#endif /* __SYSTEM_ISP_IO_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/sensor-common.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/sensor-common.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/sensor-common.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/sensor-common.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/sensor-common.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/sensor-common.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/sensor-common.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/sensor-common.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,84 @@
 +#ifndef __TX_SENSOR_COMMON_H__
 +#define __TX_SENSOR_COMMON_H__
@@ -39218,9 +39218,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/sensor-common.h 
 +}
 +
 +#endif// __TX_SENSOR_COMMON_H__
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/tx-isp-common.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/tx-isp-common.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/tx-isp-common.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/tx-isp-common.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/tx-isp-common.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/tx-isp-common.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/tx-isp-common.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/tx-isp-common.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,407 @@
 +#ifndef __TX_ISP_COMMON_H__
 +#define __TX_ISP_COMMON_H__
@@ -39629,9 +39629,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/tx-isp-common.h 
 +};
 +
 +#endif /*__TX_ISP_COMMON_H__*/
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/tx-vic-regs.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/tx-vic-regs.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/include/tx-vic-regs.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/include/tx-vic-regs.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/include/tx-vic-regs.h atoms-kernel_mod/drivers/media/platform/tx-isp/include/tx-vic-regs.h
+--- atoms-kernel/drivers/media/platform/tx-isp/include/tx-vic-regs.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/include/tx-vic-regs.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,199 @@
 +#ifndef __VIC_REG_H__
 +#define __VIC_REG_H__
@@ -39832,9 +39832,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/include/tx-vic-regs.h ke
 +
 +#endif/* CONFIG_SOC_T10 */
 +#endif/* __VIC_REG_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/libapical_isp.a kernel-3.10.14_mod/drivers/media/platform/tx-isp/libapical_isp.a
---- kernel-3.10.14/drivers/media/platform/tx-isp/libapical_isp.a	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/libapical_isp.a	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/libapical_isp.a atoms-kernel_mod/drivers/media/platform/tx-isp/libapical_isp.a
+--- atoms-kernel/drivers/media/platform/tx-isp/libapical_isp.a	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/libapical_isp.a	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,745 @@
 +!<arch>
 +/               1510573749  0     0     0       12330     `
@@ -41205,9 +41205,9 @@ $?Kp!xB  ??!x  ? B$xsz ??L!8? !p& ?$ ?  ǥ!  !8  ? !p?  c$ mP!
   ?     ?     ?     ?             @    `                             
 +        @     `     ?     
 \ No newline at end of file
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/Makefile kernel-3.10.14_mod/drivers/media/platform/tx-isp/Makefile
---- kernel-3.10.14/drivers/media/platform/tx-isp/Makefile	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/Makefile	2018-11-09 03:11:48.624838726 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/Makefile atoms-kernel_mod/drivers/media/platform/tx-isp/Makefile
+--- atoms-kernel/drivers/media/platform/tx-isp/Makefile	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/Makefile	2018-11-09 03:11:48.624838726 +0100
 @@ -0,0 +1,28 @@
 +MODULE_NAME := tx-isp
 +
@@ -41237,9 +41237,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/Makefile kernel-3.10.14_
 +	@find . -name '*.o' -o -name '*~' -o -name '.depend' -o -name '.*.cmd' \
 +		-o -name '*.mod.c' -o -name '.tmp_versions' -o -name '*.ko' \
 +		-o -name '*.symvers' -o -name 'modules.order' | xargs rm -rf
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-csi.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-csi.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-csi.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-csi.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/tx-isp-csi.c atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-csi.c
+--- atoms-kernel/drivers/media/platform/tx-isp/tx-isp-csi.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-csi.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,574 @@
 +#include <linux/delay.h>
 +#include <media/v4l2-common.h>
@@ -41815,9 +41815,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-csi.c kernel-3.10
 +	release_mem_region(res->start,res->end - res->start + 1);
 +	kfree(csd);
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-csi.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-csi.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-csi.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-csi.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/tx-isp-csi.h atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-csi.h
+--- atoms-kernel/drivers/media/platform/tx-isp/tx-isp-csi.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-csi.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,57 @@
 +#ifndef __TX_ISP_CSI_H__
 +#define __TX_ISP_CSI_H__
@@ -41876,9 +41876,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-csi.h kernel-3.10
 +void release_tx_isp_csi_device(struct v4l2_subdev *sd);
 +void check_csi_error(void);
 +#endif /* __TX_ISP_CSI_H__  */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-debug.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-debug.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-debug.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-debug.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/tx-isp-debug.c atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-debug.c
+--- atoms-kernel/drivers/media/platform/tx-isp/tx-isp-debug.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-debug.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,52 @@
 +#include <linux/debugfs.h>
 +#include "tx-isp-debug.h"
@@ -41932,9 +41932,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-debug.c kernel-3.
 +	debugfs_remove(isp_debug_dir);
 +	return 0;
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-debug.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-debug.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-debug.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-debug.h	2018-11-09 02:40:35.293908828 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/tx-isp-debug.h atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-debug.h
+--- atoms-kernel/drivers/media/platform/tx-isp/tx-isp-debug.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-debug.h	2018-11-09 02:40:35.293908828 +0100
 @@ -0,0 +1,27 @@
 +#ifndef _TX_ISP_DEBUG_H_
 +#define _TX_ISP_DEBUG_H_
@@ -41963,9 +41963,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-debug.h kernel-3.
 +int isp_debug_deinit(void);
 +int isp_printf(unsigned int level, unsigned char *fmt, ...);
 +#endif /* _ISP_DEBUG_H_ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-device.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-device.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-device.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-device.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/tx-isp-device.c atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-device.c
+--- atoms-kernel/drivers/media/platform/tx-isp/tx-isp-device.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-device.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,514 @@
 +#include <linux/module.h>
 +#include <linux/kernel.h>
@@ -42481,9 +42481,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-device.c kernel-3
 +MODULE_AUTHOR("Ingenic xhshen");
 +MODULE_DESCRIPTION("tx isp driver");
 +MODULE_LICENSE("GPL");
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-device.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-device.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-device.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-device.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/tx-isp-device.h atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-device.h
+--- atoms-kernel/drivers/media/platform/tx-isp/tx-isp-device.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-device.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,28 @@
 +#ifndef __TX_ISP_DEVICE_H__
 +#define __TX_ISP_DEVICE_H__
@@ -42513,9 +42513,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-device.h kernel-3
 +} tx_isp_device_t;
 +
 +#endif/*__TX_ISP_DEVICE_H__*/
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-frame-channel.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-frame-channel.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-frame-channel.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-frame-channel.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/tx-isp-frame-channel.c atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-frame-channel.c
+--- atoms-kernel/drivers/media/platform/tx-isp/tx-isp-frame-channel.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-frame-channel.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,1005 @@
 +#include <linux/module.h>
 +#include <linux/kernel.h>
@@ -43522,9 +43522,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-frame-channel.c k
 +	return 0;
 +}
 +#endif
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-frame-channel.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-frame-channel.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-frame-channel.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-frame-channel.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/tx-isp-frame-channel.h atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-frame-channel.h
+--- atoms-kernel/drivers/media/platform/tx-isp/tx-isp-frame-channel.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-frame-channel.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,87 @@
 +#ifndef __TX_ISP_FRAME_CHANNEL_H__
 +#define __TX_ISP_FRAME_CHANNEL_H__
@@ -43613,9 +43613,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-frame-channel.h k
 +void tx_isp_frame_channel_device_unregister(frame_chan_vdev_t *chan);
 +
 +#endif/*__TX_ISP_FRAME_CHANNEL_H__*/
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-interrupt.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-interrupt.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-interrupt.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-interrupt.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/tx-isp-interrupt.c atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-interrupt.c
+--- atoms-kernel/drivers/media/platform/tx-isp/tx-isp-interrupt.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-interrupt.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,179 @@
 +#include <tx-isp-common.h>
 +#include "tx-isp-interrupt.h"
@@ -43796,9 +43796,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-interrupt.c kerne
 +}
 +
 +
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-interrupt.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-interrupt.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-interrupt.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-interrupt.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/tx-isp-interrupt.h atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-interrupt.h
+--- atoms-kernel/drivers/media/platform/tx-isp/tx-isp-interrupt.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-interrupt.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,39 @@
 +#ifndef __TX_ISP_INTERRUPT_H__
 +#define __TX_ISP_INTERRUPT_H__
@@ -43839,9 +43839,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-interrupt.h kerne
 +int tx_isp_request_irq(struct platform_device *pdev, tx_isp_device_t *ispdev);
 +void tx_isp_free_irq(tx_isp_device_t *ispdev);
 +#endif /* __TX_ISP_INTERRUPT_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-vic.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-vic.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-vic.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-vic.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/tx-isp-vic.c atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-vic.c
+--- atoms-kernel/drivers/media/platform/tx-isp/tx-isp-vic.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-vic.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,584 @@
 +#include <linux/delay.h>
 +#include <media/v4l2-common.h>
@@ -44427,9 +44427,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-vic.c kernel-3.10
 +	}
 +	kfree(vsd);
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-vic.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-vic.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-vic.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-vic.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/tx-isp-vic.h atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-vic.h
+--- atoms-kernel/drivers/media/platform/tx-isp/tx-isp-vic.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-vic.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,33 @@
 +#ifndef __TX_ISP_VIC_H__
 +#define __TX_ISP_VIC_H__
@@ -44464,9 +44464,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-vic.h kernel-3.10
 +void release_tx_isp_vic_device(struct v4l2_subdev *sd);
 +void check_vic_error(void);
 +#endif /* __TX_ISP_VIC_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-videobuf.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-videobuf.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-videobuf.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-videobuf.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/tx-isp-videobuf.c atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-videobuf.c
+--- atoms-kernel/drivers/media/platform/tx-isp/tx-isp-videobuf.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-videobuf.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,262 @@
 +#include <linux/module.h>
 +#include <linux/slab.h>
@@ -44730,9 +44730,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-videobuf.c kernel
 +		kfree(alloc_ctx);
 +	return ret;
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-videobuf.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-videobuf.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-videobuf.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-videobuf.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/tx-isp-videobuf.h atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-videobuf.h
+--- atoms-kernel/drivers/media/platform/tx-isp/tx-isp-videobuf.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-videobuf.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,57 @@
 +#ifndef __TX_ISP_VIDEOBUF_H__
 +#define __TX_ISP_VIDEOBUF_H__
@@ -44791,9 +44791,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-videobuf.h kernel
 +int frame_buffer_manager_cleanup(void *alloc_ctx);
 +
 +#endif/* __TX_ISP_VIDEOBUF_H__ */
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-video-in.c kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-video-in.c
---- kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-video-in.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-video-in.c	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/tx-isp-video-in.c atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-video-in.c
+--- atoms-kernel/drivers/media/platform/tx-isp/tx-isp-video-in.c	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-video-in.c	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,560 @@
 +#include <linux/init.h>
 +#include <linux/module.h>
@@ -45355,9 +45355,9 @@ diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-video-in.c kernel
 +	v4l2_device_unregister_subdev(&vi->sd);
 +	kfree(vi);
 +}
-diff -Nura kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-video-in.h kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-video-in.h
---- kernel-3.10.14/drivers/media/platform/tx-isp/tx-isp-video-in.h	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_mod/drivers/media/platform/tx-isp/tx-isp-video-in.h	2018-03-20 12:23:26.000000000 +0100
+diff -Nura atoms-kernel/drivers/media/platform/tx-isp/tx-isp-video-in.h atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-video-in.h
+--- atoms-kernel/drivers/media/platform/tx-isp/tx-isp-video-in.h	1970-01-01 01:00:00.000000000 +0100
++++ atoms-kernel_mod/drivers/media/platform/tx-isp/tx-isp-video-in.h	2018-03-20 12:23:26.000000000 +0100
 @@ -0,0 +1,21 @@
 +#ifndef __TX_ISP_SENSOR_H__
 +#define __TX_ISP_SENSOR_H__
