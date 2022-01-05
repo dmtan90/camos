@@ -1,6 +1,6 @@
-diff -Nura kernel-3.10.14/arch/mips/xburst/soc-t20/chip-t20/isvp/common/board_base.c kernel-3.10.14_led/arch/mips/xburst/soc-t20/chip-t20/isvp/common/board_base.c
---- kernel-3.10.14/arch/mips/xburst/soc-t20/chip-t20/isvp/common/board_base.c	2018-09-21 16:41:27.000000000 +0200
-+++ kernel-3.10.14_led/arch/mips/xburst/soc-t20/chip-t20/isvp/common/board_base.c	2018-11-12 02:44:38.462211000 +0100
+diff -Nura kernel-3.10.14/arch/mips/xburst/soc-t31/chip-t31/isvp/common/board_base.c kernel-3.10.14_led/arch/mips/xburst/soc-t31/chip-t31/isvp/common/board_base.c
+--- kernel-3.10.14/arch/mips/xburst/soc-t31/chip-t31/isvp/common/board_base.c	2018-09-21 16:41:27.000000000 +0200
++++ kernel-3.10.14_led/arch/mips/xburst/soc-t31/chip-t31/isvp/common/board_base.c	2018-11-12 02:44:38.462211000 +0100
 @@ -28,6 +28,9 @@
  #ifdef CONFIG_KEYBOARD_GPIO
  	DEF_DEVICE(&jz_button_device, 0, 0),
@@ -11,9 +11,9 @@ diff -Nura kernel-3.10.14/arch/mips/xburst/soc-t20/chip-t20/isvp/common/board_ba
  #ifdef CONFIG_I2C_GPIO
  #ifdef CONFIG_SOFT_I2C0_GPIO_V12_JZ
  	DEF_DEVICE(&i2c0_gpio_device, 0, 0),
-diff -Nura kernel-3.10.14/arch/mips/xburst/soc-t20/chip-t20/isvp/common/board_base.h kernel-3.10.14_led/arch/mips/xburst/soc-t20/chip-t20/isvp/common/board_base.h
---- kernel-3.10.14/arch/mips/xburst/soc-t20/chip-t20/isvp/common/board_base.h	2018-09-21 16:41:27.000000000 +0200
-+++ kernel-3.10.14_led/arch/mips/xburst/soc-t20/chip-t20/isvp/common/board_base.h	2018-11-12 02:44:52.814331000 +0100
+diff -Nura kernel-3.10.14/arch/mips/xburst/soc-t31/chip-t31/isvp/common/board_base.h kernel-3.10.14_led/arch/mips/xburst/soc-t31/chip-t31/isvp/common/board_base.h
+--- kernel-3.10.14/arch/mips/xburst/soc-t31/chip-t31/isvp/common/board_base.h	2018-09-21 16:41:27.000000000 +0200
++++ kernel-3.10.14_led/arch/mips/xburst/soc-t31/chip-t31/isvp/common/board_base.h	2018-11-12 02:44:52.814331000 +0100
 @@ -9,6 +9,9 @@
  #ifdef CONFIG_KEYBOARD_GPIO
  extern struct platform_device jz_button_device;
@@ -24,9 +24,9 @@ diff -Nura kernel-3.10.14/arch/mips/xburst/soc-t20/chip-t20/isvp/common/board_ba
  #ifdef CONFIG_INV_MPU_IIO
  extern struct mpu_platform_data mpu9250_platform_data;
  #endif
-diff -Nura kernel-3.10.14/arch/mips/xburst/soc-t20/chip-t20/isvp/common/led_gpio.c kernel-3.10.14_led/arch/mips/xburst/soc-t20/chip-t20/isvp/common/led_gpio.c
---- kernel-3.10.14/arch/mips/xburst/soc-t20/chip-t20/isvp/common/led_gpio.c	1970-01-01 01:00:00.000000000 +0100
-+++ kernel-3.10.14_led/arch/mips/xburst/soc-t20/chip-t20/isvp/common/led_gpio.c	2018-11-12 04:56:52.771282964 +0100
+diff -Nura kernel-3.10.14/arch/mips/xburst/soc-t31/chip-t20/isvp/common/led_gpio.c kernel-3.10.14_led/arch/mips/xburst/soc-t31/chip-t20/isvp/common/led_gpio.c
+--- kernel-3.10.14/arch/mips/xburst/soc-t31/chip-t31/isvp/common/led_gpio.c	1970-01-01 01:00:00.000000000 +0100
++++ kernel-3.10.14_led/arch/mips/xburst/soc-t31/chip-t31/isvp/common/led_gpio.c	2018-11-12 04:56:52.771282964 +0100
 @@ -0,0 +1,46 @@
 +#include <linux/platform_device.h>
 +#include <linux/leds.h>
@@ -74,9 +74,9 @@ diff -Nura kernel-3.10.14/arch/mips/xburst/soc-t20/chip-t20/isvp/common/led_gpio
 +	},
 +};
 +#endif /* CONFIG_LEDS_GPIO */
-diff -Nura kernel-3.10.14/arch/mips/xburst/soc-t20/chip-t20/isvp/common/Makefile kernel-3.10.14_led/arch/mips/xburst/soc-t20/chip-t20/isvp/common/Makefile
---- kernel-3.10.14/arch/mips/xburst/soc-t20/chip-t20/isvp/common/Makefile	2018-09-21 16:41:27.000000000 +0200
-+++ kernel-3.10.14_led/arch/mips/xburst/soc-t20/chip-t20/isvp/common/Makefile	2018-11-12 02:16:33.209290337 +0100
+diff -Nura kernel-3.10.14/arch/mips/xburst/soc-t31/chip-t31/isvp/common/Makefile kernel-3.10.14_led/arch/mips/xburst/soc-t31/chip-t31/isvp/common/Makefile
+--- kernel-3.10.14/arch/mips/xburst/soc-t31/chip-t31/isvp/common/Makefile	2018-09-21 16:41:27.000000000 +0200
++++ kernel-3.10.14_led/arch/mips/xburst/soc-t31/chip-t31/isvp/common/Makefile	2018-11-12 02:16:33.209290337 +0100
 @@ -2,6 +2,7 @@
  obj-y		+= board_base.o
  obj-y		+= misc.o
