@@ -38,18 +38,19 @@ RUN . $NVM_DIR/nvm.sh && npm config set unsafe-perm true
 
 
 
-RUN mkdir -p /camos/build
-WORKDIR "/camos/build"
+RUN mkdir -p /openmiko/build
+WORKDIR "/openmiko/build"
 RUN wget https://buildroot.org/downloads/buildroot-2016.02.tar.gz;
 RUN tar xvf buildroot-2016.02.tar.gz;
 RUN rm buildroot-2016.02.tar.gz;
+#RUN mv buildroot-2021.02.8 buildroot-2016.02;
 
 # Change to the buildroot directory
-WORKDIR "/camos/build/buildroot-2016.02"
+WORKDIR "/openmiko/build/buildroot-2016.02"
 
 # Copy the entire source tree. Expect it to be mounted over when developing.
 COPY . /src
 
 RUN /src/buildscripts/setup_buildroot.sh
 
-WORKDIR /camos
+WORKDIR /openmiko

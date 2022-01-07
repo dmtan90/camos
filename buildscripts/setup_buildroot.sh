@@ -4,23 +4,23 @@ set -e
 # This script is expected to be run inside the development container
 # It copies from /src files that have been changed for buildroot purposes
 
-cd /camos/build/buildroot-2016.02
+cd /openmiko/build/buildroot-2016.02
 
 # Copy over custom packages removing standard ones we don't want to use
 
 # ffmpeg doesn't seem to build out of the box so use our own
-rm -rf /camos/build/buildroot-2016.02/package/ffmpeg
+rm -rf /openmiko/build/buildroot-2016.02/package/ffmpeg
 
 
 # Use our own mjpg-streamer package
-rm -rf /camos/build/buildroot-2016.02/package/mjpg-streamer
+rm -rf /openmiko/build/buildroot-2016.02/package/mjpg-streamer
 
 # Old ncurses doesn't support xterm-256color so use updated one
-rm -rf /camos/build/buildroot-2016.02/package/ncurses
+rm -rf /openmiko/build/buildroot-2016.02/package/ncurses
 
 
-#cp -r /src/custompackages/package/ffmpeg /camos/build/buildroot-2016.02/package/
-cp -r /src/custompackages/package/* /camos/build/buildroot-2016.02/package/
+#cp -r /src/custompackages/package/ffmpeg /openmiko/build/buildroot-2016.02/package/
+cp -r /src/custompackages/package/* /openmiko/build/buildroot-2016.02/package/
 
 
 # Avoid FPU bug on XBurst CPUs
@@ -63,6 +63,6 @@ make savedefconfig BR2_DEFCONFIG=/src/config/ingenic_t31_defconfig
 # make linux-update-defconfig
 
 # Start the build process
-cd /camos/build/buildroot-2016.02
+cd /openmiko/build/buildroot-2016.02
 make
 
