@@ -2,10 +2,10 @@ version: "3"
 
 services:
   builder:
-    image: camos/camos:latest
+    image: openmiko/openmiko:latest
     volumes:
       - ".:/src"
-      - "./local.mk:/camos/build/buildroot-2016.02/local.mk"
+      - "./local.mk:/openmiko/build/buildroot-2016.02/local.mk"
     ports:
       - "5003:5003"
       - "5004:5004"
