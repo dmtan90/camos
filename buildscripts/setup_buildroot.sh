@@ -64,5 +64,7 @@ make savedefconfig BR2_DEFCONFIG=/src/config/ingenic_t31_defconfig
 
 # Start the build process
 cd /openmiko/build/buildroot-2016.02
-make
+
+# Fastest build with multiple-cores
+make -j16
 
