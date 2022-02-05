@@ -43,7 +43,6 @@ WORKDIR "/openmiko/build"
 RUN wget https://buildroot.org/downloads/buildroot-2016.02.tar.gz;
 RUN tar xvf buildroot-2016.02.tar.gz;
 RUN rm buildroot-2016.02.tar.gz;
-#RUN mv buildroot-2021.02.8 buildroot-2016.02;
 
 # Change to the buildroot directory
 WORKDIR "/openmiko/build/buildroot-2016.02"

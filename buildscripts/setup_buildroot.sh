@@ -36,7 +36,7 @@ patch -p1 < /src/patches/linux_makefile.patch
 # The linux configuration is set inside the ingenic_t20_defconfig
 # using BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE
 #T20 SoC
-cp /src/config/ingenic_t20_defconfig configs/
+#cp /src/config/ingenic_t20_defconfig configs/
 
 #T31 SoC
 cp /src/config/ingenic_t31_defconfig configs/
@@ -46,10 +46,8 @@ cp /src/config/uClibc-ng.config package/uclibc
 
 
 # We want to use specific sources so copy these into the download directory
-mkdir -p dl
-cp /src/legacy_src/kernel-3.10.14.tar.xz dl/
-
-
+#mkdir -p dl
+#cp /src/legacy_src/kernel-3.10.14.tar.xz dl/
 
 # Loads up our custom configuration
 # make ingenic_t20_defconfig
@@ -60,10 +58,10 @@ make ingenic_t31_defconfig
 # Technically should be a no-op
 # make savedefconfig BR2_DEFCONFIG=/src/config/ingenic_t20_defconfig
 make savedefconfig BR2_DEFCONFIG=/src/config/ingenic_t31_defconfig
-# make linux-update-defconfig
+#make linux-update-defconfig
 
 # Start the build process
 cd /openmiko/build/buildroot-2016.02
 
-make
+make -j4 all
 

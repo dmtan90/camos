@@ -3,12 +3,12 @@
 	url = git@github.com:openmiko/buildroot_output.git
 [submodule "submodules/ingenic_videocap"]
 	path = submodules/ingenic_videocap
-	url = git@github.com:openmiko/ingenic_videocap.git
+	url = https://github.com/openmiko/ingenic_videocap.git
 	ignore = dirty
 [submodule "submodules/v4l2rtspserver"]
 	path = submodules/v4l2rtspserver
-	url = git@github.com:openmiko/v4l2rtspserver.git
+	url = https://github.com/openmiko/v4l2rtspserver.git
 	ignore = dirty
 [submodule "mjpg-streamer"]
 	path = submodules/mjpg-streamer
-	url = git@github.com:openmiko/mjpg-streamer.git
+	url = https://github.com/openmiko/mjpg-streamer.git
