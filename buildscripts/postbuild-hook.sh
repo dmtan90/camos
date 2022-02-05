@@ -29,7 +29,7 @@ cp $IMAGES/uImage.lzma $RELEASE_DIR
 cp $IMAGES/u-boot-lzo-with-spl.bin $RELEASE_DIR
 
 
-MKIMAGE=/openmiko/build/buildroot-2016.02/output/build/uboot-openmiko/tools/mkimage
+MKIMAGE=/openmiko/build/buildroot-2016.02/output/build/uboot-custom/tools/mkimage
 if [ ! -f "/usr/sbin/mkimage" ]; then
 	ln -s $MKIMAGE /usr/sbin/mkimage
 fi

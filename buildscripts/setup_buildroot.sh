@@ -46,8 +46,9 @@ cp /src/config/uClibc-ng.config package/uclibc
 
 
 # We want to use specific sources so copy these into the download directory
-#mkdir -p dl
-#cp /src/legacy_src/kernel-3.10.14.tar.xz dl/
+mkdir -p dl
+cp /src/legacy_src/kernel-3.10.14.tar.xz dl/
+cp /src/legacy_src/uboot.tar.xz dl/
 
 # Loads up our custom configuration
 # make ingenic_t20_defconfig

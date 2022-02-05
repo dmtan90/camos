@@ -26,13 +26,9 @@ BR2_ROOTFS_OVERLAY="/src/overlay_minimal"
 BR2_ROOTFS_POST_BUILD_SCRIPT="/src/buildscripts/post_fakeroot_script.sh"
 BR2_ROOTFS_POST_IMAGE_SCRIPT="/src/buildscripts/postbuild-hook.sh"
 BR2_LINUX_KERNEL=y
-#BR2_LINUX_KERNEL_CUSTOM_TARBALL=y
-#BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="https://raw.githubusercontent.com/dmtan90/camos/t31/kernel_sources/kernel-3.10.14.tar.xz"
-BR2_LINUX_KERNEL_CUSTOM_GIT=y
-BR2_LINUX_KERNEL_CUSTOM_REPO_URL="https://github.com/dmtan90/ingenic-kernel.git"
-BR2_LINUX_KERNEL_CUSTOM_REPO_VERSION="t3"
+BR2_LINUX_KERNEL_CUSTOM_TARBALL=y
 # Use local copy of the kernel instead of downloading it every time
-#BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="file://openmiko/build/buildroot/dl/kernel-3.10.14.tar.xz"
+BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="file://openmiko/build/buildroot/dl/kernel-3.10.14.tar.xz"
 BR2_LINUX_KERNEL_PATCH="/src/patches/kernel"
 BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="/src/config/linux_minimal_defconfig"
@@ -84,11 +80,8 @@ BR2_PACKAGE_V4L2LOOPBACK_UTILS=y
 BR2_PACKAGE_V4L2RTSPSERVER=y
 BR2_TARGET_ROOTFS_TAR_XZ=y
 BR2_TARGET_UBOOT=y
-BR2_TARGET_UBOOT_CUSTOM_GIT=y
-BR2_TARGET_UBOOT_CUSTOM_REPO_URL="https://github.com/dmtan90/ingenic-uboot.git"
-BR2_TARGET_UBOOT_CUSTOM_REPO_VERSION="t31"
-#BR2_TARGET_UBOOT_CUSTOM_TARBALL=y
-#BR2_TARGET_UBOOT_CUSTOM_TARBALL_LOCATION="file://openmiko/build/buildroot/dl/uboot.tar.xz"
+BR2_TARGET_UBOOT_CUSTOM_TARBALL=y
+BR2_TARGET_UBOOT_CUSTOM_TARBALL_LOCATION="file://openmiko/build/buildroot/dl/uboot.tar.xz"
 # reference here http://www.4k8k.xyz/article/li_wen01/115245258
 # For example, the command to compile norflash for T31X chip is as follows
 BR2_TARGET_UBOOT_BOARDNAME="isvp_t31_sfcnor_ddr128M"
