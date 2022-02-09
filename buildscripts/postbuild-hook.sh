@@ -105,8 +105,8 @@ OUTFILE="${RELEASE_DIR}/camos_firmware.bin"
 $MKIMAGE -A MIPS -O linux -T firmware -C none -a 0 -e 0 -n jz_fw -d $KERNEL_AND_ROOT $OUTFILE
 
 
-cp $OUTFILE $RELEASE_DIR/demo.bin
-echo "Firmware created: $RELEASE_DIR/demo.bin"
+cp $OUTFILE $RELEASE_DIR/camos_firmware.bin
+echo "Firmware created: $RELEASE_DIR/camos_firmware.bin"
 
 cp $JFFSROOTIMG $RELEASE_DIR
 
