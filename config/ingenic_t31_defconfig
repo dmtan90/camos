@@ -89,7 +89,7 @@ BR2_TARGET_UBOOT_CUSTOM_TARBALL_LOCATION="file://openmiko/build/buildroot/dl/ubo
 BR2_TARGET_UBOOT_BOARDNAME="isvp_t31_sfcnor_ddr128M"
 # Compile the uboot command for T31X chip SD card startup as follows
 # BR2_TARGET_UBOOT_BOARDNAME="isvp_t31_msc0_ddr128M"
-BR2_TARGET_UBOOT_CUSTOM_PATCH_DIR="/src/patches/uboot"
+BR2_TARGET_UBOOT_PATCH="/src/patches/uboot"
 BR2_TARGET_UBOOT_FORMAT_CUSTOM=y
 BR2_TARGET_UBOOT_FORMAT_CUSTOM_NAME="u-boot-lzo-with-spl.bin"
 BR2_PACKAGE_HOST_MTD=y
