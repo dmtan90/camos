@@ -5,7 +5,7 @@
  #define AU_KERNEL	"kernel"
  #define AU_ROOTFS	"rootfs"
 -#define AU_FW		"demo.bin"
-+#define AU_FW		"camos_firmware.bin"
++#define AU_FW		"firmware.bin"
  
  struct flash_layout {
  	long start;
